@@ -36,4 +36,30 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize + 1);
     }
 
+    /**
+     * adds cities to the list
+     * checks if correct number of cities in the list
+     */
+    @Test
+    public void countCitiesTest() {
+        list.addCity(new City("abc", "abcd"));
+        list.addCity(new City("lmn", "lmno"));
+
+        assertEquals(2, list.getCount());
+    }
+
+    /**
+     * adds cities to the list
+     * deletes a city
+     * checks if correct number of cities in the list
+     */
+    @Test
+    public void deleteCitiesTest() {
+        list.addCity(new City("abc", "abcd"));
+        list.addCity(new City("lmn", "lmno"));
+
+        list.deleteCity(1);
+
+        assertEquals(2, list.getCount());
+    }
 }

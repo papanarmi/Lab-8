@@ -62,4 +62,13 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
+    /**
+     * Delete a city object from the list
+     * @param position Position of the city object to be deleted
+     */
+    public void deleteCity(int position) {
+        if (position >= 0 && position < cities.size()) {
+            cities.remove(position);
+        }
+    }
 }
